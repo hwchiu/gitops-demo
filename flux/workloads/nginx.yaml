@@ -1,20 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: debug
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: debug
+   annotations:
+     fluxcd.io/automated: "true"
+     fluxcd.io/locked: 'false'      
   template:
     metadata:
       labels:
-        app: nginx
+        app: debug
     spec:
       containers:
-      - name: nginx
-        image: hwchiu/cicd-app:latest
+      - name: debug
+        image: hwchiu/netutils:latest
         ports:
         - containerPort: 80
         livenessProbe:

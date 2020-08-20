@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{.Chart.Name }}-nginx
+  name: {{.Chart.Name }}-debug
 spec:
-  replicas: {{ .Values.nginx.replicaCount }}
+  replicas: {{ .Values.debug.replicaCount }}
   selector:
     matchLabels:
-      app: nginx
+      app: debug
   template:
     metadata:
       labels:
-        app: nginx
+        app: debug
     spec:
       containers:
-      - name: nginx
-        image: hwchiu/cicd-app:{{ .Values.nginx.image.tag }}
+      - name: debug
+        image: hwchiu/netutils:{{ .Values.debug.image.tag }}
         ports:
         - containerPort: 80
-        imagePullPolicy: {{ .Values.nginx.pullPolicy }}
+        imagePullPolicy: {{ .Values.debug.pullPolicy }}
         livenessProbe:
           httpGet:
             path: /
