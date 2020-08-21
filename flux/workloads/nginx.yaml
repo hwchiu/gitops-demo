@@ -18,4 +18,4 @@ spec:
     spec:
       containers:
       - name: debug
-        image: hwchiu/netutils:latest
+        image: hwchiu/netutils:0.1.0
