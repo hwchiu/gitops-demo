@@ -7,9 +7,9 @@ spec:
   selector:
     matchLabels:
       app: debug
-   annotations:
-     fluxcd.io/automated: "true"
-     fluxcd.io/locked: 'false'      
+    annotations:
+      fluxcd.io/automated: "true"
+      fluxcd.io/locked: 'false'      
   template:
     metadata:
       labels:
