@@ -1,0 +1,19 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: cicd-test
+  namespace: default
+  annotations:
+    tag.fluxcd.io/nginx: debug.image.tag
+    filter.fluxcd.io/nginx: semver:~2
+    fluxcd.io/automated: 'true'
+spec:
+  releaseName: cicd-test
+  chart:
+    git: git@github.com:hwchiu/gitops-demo
+    path: argocd/
+  values:
+    debug:
+      image:
+        tag: latest
