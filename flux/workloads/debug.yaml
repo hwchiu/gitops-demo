@@ -19,4 +19,4 @@ spec:
     spec:
       containers:
       - name: debug
-        image: hwchiu/netutils:0.1.6
+        image: hwchiu/netutils:0.1.7
