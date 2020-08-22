@@ -2,7 +2,7 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: cicd-test
+  name: gitops-demo
   namespace: default
   annotations:
     tag.fluxcd.io/debug: debug.image.tag
