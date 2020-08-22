@@ -15,4 +15,4 @@ spec:
   values:
     image:
       repository: hwchiu/netutils
-      tag: 0.1.4
+      tag: 1.1.1
