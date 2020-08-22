@@ -6,7 +6,7 @@ metadata:
   namespace: default
   annotations:
     fluxcd.io/automated: "true"
-    filter.fluxcd.io/chart-image: semver:~0.1
+    filter.fluxcd.io/chart-image: semver:*
 spec:
   releaseName: gitops-demo
   chart:
@@ -14,4 +14,5 @@ spec:
     path: argocd/
   values:
     image:
+      repository: hwchiu/netutils
       tag: 0.1.4

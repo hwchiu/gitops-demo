@@ -4,5 +4,6 @@
 
 replicaCount: 3
 image:
+  repository: hwchiu/netutils
   tag: latest
   pullPolicy: Always

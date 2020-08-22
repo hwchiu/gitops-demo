@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: debug
-        image: hwchiu/netutils:{{ .Values.image.tag }}
+        image: {{ .Values.image.repository}}:{{ .Values.image.tag }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
 
