@@ -4,9 +4,9 @@ kind: Deployment
 metadata:
   name: debug
   annotations:
-    fluxcd.io/tag.podinfod: semver:~0.1
-    fluxcd.io/automated: "true"
-    fluxcd.io/locked: 'false'
+    fluxcd.io/tag.podinfod: "semver:*"
+    fluxcd.io/automated: true
+    fluxcd.io/locked: false
 spec:
   replicas: 3
   selector:
