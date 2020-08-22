@@ -5,9 +5,8 @@ metadata:
   name: gitops-demo
   namespace: default
   annotations:
-    tag.fluxcd.io/debug: debug.image.tag
-    filter.fluxcd.io/chart-image: "semver:~0.1"
-    fluxcd.io/automated: 'true'
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: semver:~0.1
 spec:
   releaseName: gitops-demo
   chart:
