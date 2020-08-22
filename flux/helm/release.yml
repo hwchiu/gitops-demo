@@ -5,7 +5,6 @@ metadata:
   name: gitops-demo
   namespace: default
   annotations:
-    fluxcd.io/automated: "true"
     filter.fluxcd.io/chart-image: semver:*
 spec:
   releaseName: gitops-demo
