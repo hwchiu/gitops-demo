@@ -6,7 +6,7 @@ metadata:
   namespace: default
   annotations:
     tag.fluxcd.io/debug: debug.image.tag
-    filter.fluxcd.io/debug: semver:~0.1
+    filter.fluxcd.io/debug: "semver:~0.1"
     fluxcd.io/automated: 'true'
 spec:
   releaseName: gitops-demo

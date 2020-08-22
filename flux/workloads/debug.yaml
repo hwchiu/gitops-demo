@@ -5,8 +5,8 @@ metadata:
   name: debug
   annotations:
     fluxcd.io/tag.podinfod: "semver:*"
-    fluxcd.io/automated: true
-    fluxcd.io/locked: false
+    fluxcd.io/automated: "true"
+    fluxcd.io/locked: "false"
 spec:
   replicas: 3
   selector:
